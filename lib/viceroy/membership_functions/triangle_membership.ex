@@ -11,7 +11,7 @@ defmodule TriangleMembership do
     0
   end
 
-  @spec resolve(any, any) :: float
+  @spec resolve({number, number, number}, number) :: number
   def resolve(shape, value) do
     calc_shape(shape, value)
   end
