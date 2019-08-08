@@ -16,4 +16,3 @@ defmodule TriangularMembership do
     calc_shape(shape, value)
   end
 end
-

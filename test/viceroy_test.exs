@@ -26,7 +26,6 @@ defmodule ViceroyTest do
     assert TriangularMembership.resolve({3, 5, 10}, 20) == 0
   end
 
-
   test "trapezoidal low-left test" do
     assert TrapezoidalMembership.resolve({0, 5, 10, 20}, 2.5) == 0.5
   end
