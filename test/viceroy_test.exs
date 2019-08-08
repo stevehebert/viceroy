@@ -6,24 +6,24 @@ defmodule ViceroyTest do
     assert Viceroy.hello() == :world
   end
 
-  test "triangle left test" do
-    assert TriangleMembership.resolve({0, 5, 10}, 2.5) == 0.5
+  test "triangular left test" do
+    assert TriangularMembership.resolve({0, 5, 10}, 2.5) == 0.5
   end
 
-  test "triangle right test" do
-    assert TriangleMembership.resolve({0, 5, 10}, 6) == 0.8
+  test "triangular right test" do
+    assert TriangularMembership.resolve({0, 5, 10}, 6) == 0.8
   end
 
-  test "triangle mid test" do
-    assert TriangleMembership.resolve({0, 5, 10}, 5) == 1.0
+  test "triangular mid test" do
+    assert TriangularMembership.resolve({0, 5, 10}, 5) == 1.0
   end
 
-  test "triangle lower bound test" do
-    assert TriangleMembership.resolve({3, 5, 10}, 1) == 0
+  test "triangular lower bound test" do
+    assert TriangularMembership.resolve({3, 5, 10}, 1) == 0
   end
 
-  test "triangle upper bound test" do
-    assert TriangleMembership.resolve({3, 5, 10}, 20) == 0
+  test "triangular upper bound test" do
+    assert TriangularMembership.resolve({3, 5, 10}, 20) == 0
   end
 
 

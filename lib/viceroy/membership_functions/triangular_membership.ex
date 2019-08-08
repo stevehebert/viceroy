@@ -1,4 +1,4 @@
-defmodule TriangleMembership do
+defmodule TriangularMembership do
   defp calc_shape({left, mid, _right}, value) when value > left and value < mid do
     (value - left) * (1.0 / (mid - left))
   end
