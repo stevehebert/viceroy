@@ -53,4 +53,17 @@ defmodule ViceroyTest do
   test "trapezoidal upper bound test" do
     assert TrapezoidalMembership.resolve({3, 5, 10, 20}, 30) == 0
   end
+
+  test "variable creation" do
+    {:ok, temperature} = Variable.start_link(nil)
+
+    Variable.add_membership(temperature, :cold, TriangularMembership.create({-100, 0.0, 50}))
+    Variable.add_membership(temperature, :cool, TriangularMembership.create({40, 60, 80}))
+    Variable.add_membership(temperature, :warm, TriangularMembership.create({75, 85, 95}))
+    Variable.add_membership(temperature, :hot, TriangularMembership.create({90, 110, 120}))
+
+    test = Variable.get_membership(temperature, :warm).mid
+
+    assert test == 85
+  end
 end
