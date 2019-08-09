@@ -1,4 +1,6 @@
 defmodule TrapezoidalMembership do
+  use Membership
+
   defp calc_shape({low, left, _right, _high}, value) when value > low and value < left do
     (value - low) * (1.0 / (left - low))
   end

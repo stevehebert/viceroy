@@ -1,4 +1,8 @@
+
+
 defmodule TriangularMembership do
+  use Membership
+
   defp calc_shape({left, mid, _right}, value) when value > left and value < mid do
     (value - left) * (1.0 / (mid - left))
   end
@@ -8,7 +12,7 @@ defmodule TriangularMembership do
   end
 
   defp calc_shape(_shape, _value) do
-    0
+    0.0
   end
 
   @spec resolve({float, float, float}, float) :: float
@@ -16,3 +20,6 @@ defmodule TriangularMembership do
     calc_shape(shape, value)
   end
 end
+
+
+
