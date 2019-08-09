@@ -1,5 +1,3 @@
-
-
 defmodule TriangularMembership do
   use Membership
 
@@ -20,6 +18,3 @@ defmodule TriangularMembership do
     calc_shape(shape, value)
   end
 end
-
-
-
